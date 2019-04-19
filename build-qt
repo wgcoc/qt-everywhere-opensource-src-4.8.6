@@ -1,0 +1,14 @@
+#!/bin/sh
+
+./configure \
+	-prefix /home/wgco/onwork/qt	\
+	-opensource -confirm-license -release -embedded arm	\
+	-xplatform qws/linux-arm-gnueabi-g++			\
+	-depths 16,18,24,32 -no-qvfb -no-cups -no-mmx		\
+	-no-3dnow -no-sse -no-sse2 -no-glib -no-openssl -shared \
+	-no-largefile -no-accessibility -no-xrender -no-webkit	\
+	-no-gtkstyle -nomake examples -nomake docs -nomake demos	\
+	-fast -lrt -little-endian -qt-mouse-pc -qt-mouse-linuxtp \
+	-qt-mouse-linuxinput -qt-kbd-linuxinput		\
+	-qt-gfx-linuxfb -qt-gfx-transformed -no-pch	\
+#	-D QT_QWS_CLIENTBLIT
